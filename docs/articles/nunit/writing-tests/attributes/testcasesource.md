@@ -187,7 +187,7 @@ public void TestMethod(int num)
 
 ## Notes
 
-1. It is recommended that the SourceType not be the same as the test fixture class. It may be a nested class, however, and probably should be if the data is only used within that fixture.
+[!include[](~/snippets/recommended-source-type-not-be-same.md)]
 2. A generic `IEnumerable` and `IEnumerator` may be used but NUnit will actually deal with the underlying `IEnumerator` in the current release.
 3. The GetEnumerator method may use yield statements or simply return the enumerator for an array or other collection held by the class.
 
