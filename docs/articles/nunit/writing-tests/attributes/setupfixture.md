@@ -21,6 +21,10 @@ is called before any tests or setup methods in the NUnit.Tests namespace. The me
 RunAfterAnyTests() is called after all the tests in the namespace as well as their
 individual or fixture teardowns have completed execution.
 
+Note that the SetUpFixture is not intended to be inherited from by your TestFixture 
+classes. If you do that, your one-time methods will execute once per TestFixture 
+plus once for the SetUpFixture itself!
+
 Multiple SetUpFixtures may be created in a given namespace. The order of execution
 of such fixtures is indeterminate.
 
